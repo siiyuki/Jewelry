@@ -6,7 +6,22 @@ public class Move : MonoBehaviour
 {
 
 
-    void Update()
+        private Rigidbody rb;
+        private int upForce;
+        private float distance;
+
+        void Start()
+        {
+            rb = GetComponent<Rigidbody>();
+            upForce = 100;
+            distance = 1.0f;
+        }
+
+
+
+
+
+        void Update()
     {
         Rigidbody rb = this.GetComponent<Rigidbody>();  // rigidbodyÇéÊìæ
         // ç∂Ç…à⁄ìÆ
@@ -32,6 +47,20 @@ public class Move : MonoBehaviour
         {
             Vector3 force = new Vector3(0.0f, 0.0f, -4.0f);    // óÕÇê›íË
             rb.AddForce(force);
+        }
+
+
+
+
+        Vector3 rayPosition = transform.position + new Vector3(0.0f, 0.0f, 0.0f);
+        Ray ray = new Ray(rayPosition, Vector3.down);
+        bool isGround = Physics.Raycast(ray, distance);
+        Debug.DrawRay(rayPosition, Vector3.down * distance, Color.red);
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (isGround)
+                rb.AddForce(new Vector3(0, upForce, 0));
         }
 
     }
