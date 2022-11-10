@@ -9,12 +9,14 @@ public class Move : MonoBehaviour
         private Rigidbody rb;
         private int upForce;
         private float distance;
+        private float m_force;
 
         void Start()
         {
             rb = GetComponent<Rigidbody>();
-            upForce = 100;
+            upForce = 50;
             distance = 1.0f;
+            m_force = 5.0f;
         }
 
 
@@ -27,25 +29,25 @@ public class Move : MonoBehaviour
         // ¶‚ÉˆÚ“®
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Vector3 force = new Vector3(-4.0f, 0.0f, 0.0f);    // —Í‚ğİ’è
+            Vector3 force = new Vector3(-m_force, 0.0f, 0.0f);    // —Í‚ğİ’è
             rb.AddForce(force);
         }
         // ‰E‚ÉˆÚ“®
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Vector3 force = new Vector3(4.0f, 0.0f, 0.0f);    // —Í‚ğİ’è
+            Vector3 force = new Vector3(m_force, 0.0f, 0.0f);    // —Í‚ğİ’è
             rb.AddForce(force);
         }
         // ‘O‚ÉˆÚ“®
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Vector3 force = new Vector3(0.0f, 0.0f, 4.0f);    // —Í‚ğİ’è
+            Vector3 force = new Vector3(0.0f, 0.0f, m_force);    // —Í‚ğİ’è
             rb.AddForce(force);
         }
         // Œã‚ë‚ÉˆÚ“®
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            Vector3 force = new Vector3(0.0f, 0.0f, -4.0f);    // —Í‚ğİ’è
+            Vector3 force = new Vector3(0.0f, 0.0f, -m_force);    // —Í‚ğİ’è
             rb.AddForce(force);
         }
 
