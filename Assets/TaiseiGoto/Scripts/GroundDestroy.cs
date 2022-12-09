@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class GroundDestroy : MonoBehaviour
 {
-    private void OnCollisionExit(Collision other)
+    // Start is called before the first frame update
+    void Start()
     {
-        Destroy(other.gameObject);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
