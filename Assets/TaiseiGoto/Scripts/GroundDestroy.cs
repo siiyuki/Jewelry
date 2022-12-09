@@ -7,15 +7,15 @@ public class GroundDestroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
