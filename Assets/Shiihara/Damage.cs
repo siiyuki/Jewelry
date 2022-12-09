@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Damage : MonoBehaviour
 {
+    bool timeflag = false;
     // Start is called before the first frame update
     private ParticleSystem particle;
     void Start()
@@ -16,7 +17,11 @@ public class Damage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(timeflag == true)
+        {
 
+            Invoke("Test2", 3.0f);
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,10 +30,11 @@ public class Damage : MonoBehaviour
         {
             Debug.Log("Enemyにつかまった");
             //うごきとめる
+            Time.timeScale = 0.1f;//時間遅く
             //少しして破壊
-            Invoke("Test1", 1.0f);　// 関数Test1を3秒後に実行
+            Invoke("Test1", 0.1f);
+            Invoke("Test2", 1.0f);
             //シーン遷移　リスタート
-            Invoke("Test2", 3.0f);　// 関数Test1を3秒後に実行
 
         }
     }
@@ -36,6 +42,7 @@ public class Damage : MonoBehaviour
 
     void Test1()
     {
+        Time.timeScale = 1;
         MeshRenderer mesh = this.gameObject.GetComponent<MeshRenderer>();
         if (mesh != null) mesh.enabled = false;
         particle.Play();
