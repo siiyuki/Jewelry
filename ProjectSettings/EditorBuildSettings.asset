@@ -4,5 +4,44 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Kirikawa/Garnet.unity
+    guid: f1a7498036fbe914180176f661035eb6
+  - enabled: 1
+    path: Assets/Kirikawa/Zukan.unity
+    guid: 105142b5b1311d84f8df36c9f58a9929
+  - enabled: 1
+    path: Assets/Kirikawa/Amethyst.unity
+    guid: 983c6ac1bbd4da14f9c0bafd0f02ed34
+  - enabled: 1
+    path: Assets/Kirikawa/Aquamarine.unity
+    guid: a295d6934fc2cc648ba060adee574424
+  - enabled: 1
+    path: Assets/Kirikawa/Peridot.unity
+    guid: 45e61b6def056ac4f83d10ee8a8a55a1
+  - enabled: 1
+    path: Assets/Kirikawa/Topaz.unity
+    guid: 476645874a11c4b4f835b064b75d90f4
+  - enabled: 1
+    path: Assets/Kirikawa/Diamond.unity
+    guid: 8f1c0c96dfe69934292b777e98edae48
+  - enabled: 1
+    path: Assets/Kirikawa/Emerald.unity
+    guid: c8ec863b4e77df04caa268d9fbf8805a
+  - enabled: 1
+    path: Assets/Kirikawa/Ruby.unity
+    guid: e1c262089b46fbd499603df66d2bb0dc
+  - enabled: 1
+    path: Assets/Kirikawa/Sapphire.unity
+    guid: b4359da3c3144104dbe4b106e7bad354
+  - enabled: 1
+    path: Assets/Kirikawa/Pearl.unity
+    guid: cdd1ce4d7970f154f9b60ad3501a7a8d
+  - enabled: 1
+    path: Assets/Kirikawa/Opal.unity
+    guid: c1f997fde05649f4d936c5552744295d
+  - enabled: 1
+    path: Assets/Kirikawa/Lapislazuli.unity
+    guid: 3156673ea8a319846b7fba1ee694d186
   m_configObjects: {}
