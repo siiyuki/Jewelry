@@ -4,6 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Title.unity
@@ -53,4 +54,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kirikawa/Ruby.unity
     guid: e1c262089b46fbd499603df66d2bb0dc
+=======
+  m_Scenes: []
+>>>>>>> 73f667d7ffdfbc7b1e6216b48d27df57df301ebf
   m_configObjects: {}
