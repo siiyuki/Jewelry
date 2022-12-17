@@ -13,7 +13,8 @@ public class Move : MonoBehaviour
 
         void Start()
         {
-            rb = GetComponent<Rigidbody>();
+        Time.timeScale = 1f;
+        rb = GetComponent<Rigidbody>();
             upForce = 50;
             distance = 1.0f;
             m_force = 5.0f;
