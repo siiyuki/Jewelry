@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scenechange1 : MonoBehaviour
+public class Toaquamarine: MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Garnet");
+        SceneManager.LoadScene("Aquamarine");
     }
-
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
     }
 }

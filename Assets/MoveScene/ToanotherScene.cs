@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene11 : MonoBehaviour
+public class ToanotherScene : MonoBehaviour
 {
-    public void OnClickStartButton()
-    {
-        SceneManager.LoadScene("Topaz");
-    }
+    [SerializeField] Scene scene;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    public void OnClickStartButton()
+    {
+        SceneManager.LoadScene(scene.name);
     }
 }

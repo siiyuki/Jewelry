@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene7 : MonoBehaviour
+public class Toamethyst : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Ruby");
+        SceneManager.LoadScene("Amethyst");
     }
     // Start is called before the first frame update
     void Start()

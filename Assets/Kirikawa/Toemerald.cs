@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene5 : MonoBehaviour
+public class Toemerald : MonoBehaviour
 {
     public void OnClickStartButton()
     {

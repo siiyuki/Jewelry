@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene12 : MonoBehaviour
+public class Toopal : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Lapislazuli");
+        SceneManager.LoadScene("Opal");
     }
     // Start is called before the first frame update
     void Start()

@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Scene4 : MonoBehaviour
+
+public class Stoneselect : MonoBehaviour
 {
-    public void OnClickStartButton()
-    {
-        SceneManager.LoadScene("Diamond");
-    }
+    int a;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        a = PlayerPrefs.GetInt("CHARA_NUMBER", 1);
+        Debug.Log(a);
     }
 
     // Update is called once per frame

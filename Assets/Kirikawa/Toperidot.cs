@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Back : MonoBehaviour
+public class Toperidot : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Zukan");
+        SceneManager.LoadScene("Peridot");
     }
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
