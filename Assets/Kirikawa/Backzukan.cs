@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene12 : MonoBehaviour
+public class Backzukan : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Lapislazuli");
+        SceneManager.LoadScene("Zukan");
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

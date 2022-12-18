@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene4 : MonoBehaviour
+public class Toperidot : MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Diamond");
+        SceneManager.LoadScene("Peridot");
     }
     // Start is called before the first frame update
     void Start()

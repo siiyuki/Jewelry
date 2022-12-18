@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Scene11 : MonoBehaviour
+public class Toaquamarine: MonoBehaviour
 {
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Topaz");
+        SceneManager.LoadScene("Aquamarine");
     }
     // Start is called before the first frame update
     void Start()
