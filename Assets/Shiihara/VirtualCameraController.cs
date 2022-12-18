@@ -32,7 +32,7 @@ public class VirtualCameraController : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         Vector3 offset = this.virtualCamera.transform.forward * scroll * forwardSpeed;
         orbitalTransposer.m_FollowOffset -= offset;
-        Debug.Log(offset.ToString());
+        //Debug.Log(offset.ToString());
     }
 
 
