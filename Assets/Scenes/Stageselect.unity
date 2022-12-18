@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 58799054}
   - component: {fileID: 58799053}
   - component: {fileID: 58799052}
-  - component: {fileID: 58799051}
+  - component: {fileID: 58799055}
   m_Layer: 5
   m_Name: stage3
   m_TagString: Untagged
@@ -164,18 +164,6 @@ RectTransform:
   m_AnchoredPosition: {x: 196, y: 4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &58799051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58799049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb4f67762845a645854ae23ae59c0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &58799052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +208,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 58799051}
-        m_TargetAssemblyTypeName: ToStage1, Assembly-CSharp
+      - m_Target: {fileID: 58799055}
+        m_TargetAssemblyTypeName: ToTowerStage, Assembly-CSharp
         m_MethodName: OnClickStartButton
         m_Mode: 1
         m_Arguments:
@@ -270,6 +258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58799049}
   m_CullTransparentMesh: 1
+--- !u!114 &58799055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58799049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197a09273409f6a4bbd97930f22477ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &63418409
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 63418414}
   - component: {fileID: 63418413}
   - component: {fileID: 63418412}
-  - component: {fileID: 63418411}
+  - component: {fileID: 63418415}
   m_Layer: 5
   m_Name: stage1
   m_TagString: Untagged
@@ -311,18 +311,6 @@ RectTransform:
   m_AnchoredPosition: {x: -206, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &63418411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63418409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb4f67762845a645854ae23ae59c0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &63418412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,8 +355,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 63418411}
-        m_TargetAssemblyTypeName: ToStage1, Assembly-CSharp
+      - m_Target: {fileID: 63418415}
+        m_TargetAssemblyTypeName: ToNodaStage, Assembly-CSharp
         m_MethodName: OnClickStartButton
         m_Mode: 1
         m_Arguments:
@@ -417,6 +405,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63418409}
   m_CullTransparentMesh: 1
+--- !u!114 &63418415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63418409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aec96bfe7cd4349944bf8098bc4421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &124839950
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: STAGE1
+  m_Text: STAGE1 NodaStage
 --- !u!222 &124839953
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 1609996607}
   - component: {fileID: 1609996606}
   - component: {fileID: 1609996605}
-  - component: {fileID: 1609996604}
+  - component: {fileID: 1609996608}
   m_Layer: 5
   m_Name: stage2
   m_TagString: Untagged
@@ -1961,18 +1961,6 @@ RectTransform:
   m_AnchoredPosition: {x: -9, y: 1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1609996604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609996602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb4f67762845a645854ae23ae59c0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1609996605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,8 +2005,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1609996604}
-        m_TargetAssemblyTypeName: ToStage1, Assembly-CSharp
+      - m_Target: {fileID: 1609996608}
+        m_TargetAssemblyTypeName: ToDropperStage, Assembly-CSharp
         m_MethodName: OnClickStartButton
         m_Mode: 1
         m_Arguments:
@@ -2067,6 +2055,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609996602}
   m_CullTransparentMesh: 1
+--- !u!114 &1609996608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609996602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2833c99b70546439a8aa2731340895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867123014
 GameObject:
   m_ObjectHideFlags: 0
