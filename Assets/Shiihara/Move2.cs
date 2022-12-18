@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class Move2 : MonoBehaviour
 {
+    [SerializeField] GameObject Player;
     private Rigidbody rb;
     private float upForce;
     private float distance;
@@ -14,7 +15,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1f;
-        rb = GetComponent<Rigidbody>();
+        rb = Player.GetComponent<Rigidbody>();
         upForce = 50;
         distance = 1.0f;
         m_force = 5.0f;
