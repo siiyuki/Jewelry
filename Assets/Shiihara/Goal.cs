@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class Goal : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("何かにぶつかった");
+        //Debug.Log("何かにぶつかった");
         if (collision.gameObject.tag == "Goal")
         {
             //Debug.Log("Enemyにつかまった");
@@ -35,6 +36,16 @@ public class Goal : MonoBehaviour
             //少しして破壊
             Invoke("Test1", 0.1f);
             Invoke("Test2", 0.2f);
+            //シーン遷移　リスタート
+
+        }else if (collision.gameObject.tag == "Goal2")
+        {
+            //Debug.Log("Enemyにつかまった");
+            //うごきとめる
+            Time.timeScale = 0.1f;//時間遅く
+            //少しして破壊
+            Invoke("Test1", 0.1f);
+            Invoke("Test3", 0.2f);
             //シーン遷移　リスタート
 
         }
@@ -54,5 +65,10 @@ public class Goal : MonoBehaviour
         Time.timeScale = 0f;
         Clear.SetActive(true);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    void Test3()
+    {
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("Stageselect");
     }
 }
