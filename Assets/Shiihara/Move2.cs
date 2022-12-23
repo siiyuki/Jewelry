@@ -6,23 +6,23 @@ public class Move2 : MonoBehaviour
 {
     //[SerializeField] GameObject Player;
     //private Rigidbody rb;
-    private float upForce;
+    [SerializeField]  private float upForce = 150;
     private float distance;
-    private float m_force;
+    //private float m_force;
 
     float inputHorizontal;
     float inputVertical;
     Rigidbody rb;
 
-    float moveSpeed = 10f;
+    [SerializeField]float moveSpeed = 500f;
 
     void Start()
     {
         Time.timeScale = 1f;
         rb = GetComponent<Rigidbody>();
-        upForce = 150;
+        //upForce = 150;
         distance = 1.0f;
-        m_force = 5.0f;
+        //m_force = 5.0f;
 
 
 
@@ -103,11 +103,11 @@ public class Move2 : MonoBehaviour
         Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
 
         // 方向キーの入力値とカメラの向きから、移動方向を決定
-        Vector3 moveForward = cameraForward * inputVertical + Camera.main.transform.right * inputHorizontal;
+        Vector3 moveForward = cameraForward * Input.GetAxis("Vertical") + Camera.main.transform.right * Input.GetAxis("Horizontal");
 
         // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
         //rb.velocity = moveForward * moveSpeed + new Vector3(0, rb.velocity.y, 0);
-        rb.AddForce(moveForward * moveSpeed);
+        rb.AddForce(moveForward * moveSpeed* Time.deltaTime);
 
     }
 
