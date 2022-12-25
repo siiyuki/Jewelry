@@ -26,6 +26,6 @@ public class ToNodaStage : MonoBehaviour
     }
     void DelayMethod()
     {
-        SceneManager.LoadScene("NodaStage");
+        SceneManager.LoadScene("NodaStage3");
     }
 }

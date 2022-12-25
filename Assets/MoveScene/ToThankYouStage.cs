@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ToStage1 : MonoBehaviour
+public class ToThankYouStage : MonoBehaviour
 {
     public AudioClip sound1;
     AudioSource audioSource;
@@ -26,6 +26,6 @@ public class ToStage1 : MonoBehaviour
     }
     void DelayMethod()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("ThankYouStage");
     }
 }
