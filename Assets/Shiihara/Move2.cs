@@ -6,7 +6,11 @@ public class Move2 : MonoBehaviour
 {
     //[SerializeField] GameObject Player;
     //private Rigidbody rb;
-    [SerializeField]  private float upForce = 150;
+    [SerializeField]  private float upForce = 150f;
+    [SerializeField] private float unground_move = 0.75f;
+
+    [SerializeField]float moveSpeed = 500f;
+    private float move;
     private float distance;
     //private float m_force;
 
@@ -14,13 +18,16 @@ public class Move2 : MonoBehaviour
     float inputVertical;
     Rigidbody rb;
 
-    [SerializeField]float moveSpeed = 500f;
+    public AudioClip sound1;
+    AudioSource audioSource;
+
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Time.timeScale = 1f;
         rb = GetComponent<Rigidbody>();
-        //upForce = 150;
+        //upForce = 150;..
         distance = 1.0f;
         //m_force = 5.0f;
 
@@ -76,29 +83,31 @@ public class Move2 : MonoBehaviour
 
         rb.AddForce(force);
         */
-
-        
         Vector3 rayPosition = transform.position + new Vector3(0.0f, 0.0f, 0.0f);
         Ray ray = new Ray(rayPosition, Vector3.down);
         bool isGround = Physics.Raycast(ray, distance);
-        Debug.DrawRay(rayPosition, Vector3.down * distance, Color.red);
 
 
 
-        if (!isGround)
+        if (isGround)
+        {
+            move = moveSpeed;
+
+        }else if (!isGround)
         {
             rb.AddForce(new Vector3(0, -(float)(10), 0));
+            move = unground_move * move;
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
             if (isGround)
+            {
+                audioSource.PlayOneShot(sound1);
                 rb.AddForce(new Vector3(0, upForce, 0));
-
+            }
         }
         
-
-
         // カメラの方向から、X-Z平面の単位ベクトルを取得
         Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
 
@@ -107,7 +116,9 @@ public class Move2 : MonoBehaviour
 
         // 移動方向にスピードを掛ける。ジャンプや落下がある場合は、別途Y軸方向の速度ベクトルを足す。
         //rb.velocity = moveForward * moveSpeed + new Vector3(0, rb.velocity.y, 0);
-        rb.AddForce(moveForward * moveSpeed* Time.deltaTime);
+        rb.AddForce(moveForward * move* Time.deltaTime);
+
+
 
     }
 

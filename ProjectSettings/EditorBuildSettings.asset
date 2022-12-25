@@ -42,6 +42,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage1.unity
     guid: 405013f1d58e22f488a0ad1ee4b0367c
   - enabled: 1
+    path: Assets/Stage/Shiihara1.unity
+    guid: a5fcffb2f42be544d8ff0ca2c3560a73
+  - enabled: 1
     path: Assets/Scenes/Stageselect.unity
     guid: 3c7c70b4c25ac6946ad48146201156f3
   - enabled: 1

@@ -17,10 +17,14 @@ public class Damage : MonoBehaviour
         [SerializeField] GameObject No10;
         [SerializeField] GameObject No11;
     bool timeflag = false;
+
+    public AudioClip sound1;
+    AudioSource audioSource;
     // Start is called before the first frame update
     [SerializeField]private ParticleSystem particle;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         GameObject child = transform.Find("Particle System").gameObject;
         particle = child.GetComponent<ParticleSystem>();
         particle.Stop();
@@ -79,6 +83,7 @@ public class Damage : MonoBehaviour
         if (mesh != null) mesh.enabled = false;
         mesh = No11.GetComponent<MeshRenderer>();
         if (mesh != null) mesh.enabled = false;
+        audioSource.PlayOneShot(sound1);
         particle.Play();
 
     }

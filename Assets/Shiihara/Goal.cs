@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 public class Goal : MonoBehaviour
 {
     [SerializeField] GameObject Clear;
+    [SerializeField] GameObject Totitle;
     bool timeflag = false;
+
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     private ParticleSystem particle;
+    [SerializeField] private AudioClip sound1;
+    AudioSource audioSource2;
     void Start()
     {
+
+        audioSource2 = GetComponent<AudioSource>();
+        //audioSource = this.GetComponent<AudioSource>();
         //GameObject child = transform.Find("Particle System").gameObject;
         //particle = child.GetComponent<ParticleSystem>();
         //particle.Stop();
@@ -25,11 +33,12 @@ public class Goal : MonoBehaviour
             Invoke("Test2", 3.0f);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         //Debug.Log("‰½‚©‚É‚Ô‚Â‚©‚Á‚½");
         if (collision.gameObject.tag == "Goal")
         {
+            audioSource.Stop();
             //Debug.Log("Enemy‚É‚Â‚©‚Ü‚Á‚½");
             //‚¤‚²‚«‚Æ‚ß‚é
             Time.timeScale = 0.1f;//ŽžŠÔ’x‚­
@@ -40,6 +49,7 @@ public class Goal : MonoBehaviour
 
         }else if (collision.gameObject.tag == "Goal2")
         {
+            audioSource.Stop();
             //Debug.Log("Enemy‚É‚Â‚©‚Ü‚Á‚½");
             //‚¤‚²‚«‚Æ‚ß‚é
             Time.timeScale = 0.1f;//ŽžŠÔ’x‚­
@@ -62,13 +72,16 @@ public class Goal : MonoBehaviour
     }
     void Test2()
     {
+        audioSource.PlayOneShot(sound1);
         Time.timeScale = 0f;
         Clear.SetActive(true);
+        Totitle.SetActive(false);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     void Test3()
     {
         Time.timeScale = 0f;
+        Totitle.SetActive(false);
         SceneManager.LoadScene("Stageselect");
     }
 }

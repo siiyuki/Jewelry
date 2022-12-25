@@ -1546,6 +1546,7 @@ GameObject:
   - component: {fileID: 1201357933}
   - component: {fileID: 1201357932}
   - component: {fileID: 1201357935}
+  - component: {fileID: 1201357936}
   m_Layer: 5
   m_Name: stage5
   m_TagString: Untagged
@@ -1618,8 +1619,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1201357935}
-        m_TargetAssemblyTypeName: ToStage1, Assembly-CSharp
+      - m_Target: {fileID: 1201357936}
+        m_TargetAssemblyTypeName: ToShiihara1, Assembly-CSharp
         m_MethodName: OnClickStartButton
         m_Mode: 1
         m_Arguments:
@@ -1675,9 +1676,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1201357930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eb4f67762845a645854ae23ae59c0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1201357936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201357930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ef87dd26b20684b8a4b0ac013e1358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1263838104
