@@ -16,6 +16,7 @@ public class Goal : MonoBehaviour
     AudioSource audioSource2;
     void Start()
     {
+        Time.timeScale = 1;
 
         audioSource2 = GetComponent<AudioSource>();
         //audioSource = this.GetComponent<AudioSource>();
@@ -73,15 +74,15 @@ public class Goal : MonoBehaviour
     void Test2()
     {
         audioSource.PlayOneShot(sound1);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
         Clear.SetActive(true);
-        Totitle.SetActive(false);
+        //Totitle.SetActive(false);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     void Test3()
     {
-        Time.timeScale = 0f;
-        Totitle.SetActive(false);
+        //Time.timeScale = 0f;
+        //Totitle.SetActive(false);
         SceneManager.LoadScene("Stageselect");
     }
 }

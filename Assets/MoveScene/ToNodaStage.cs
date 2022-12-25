@@ -5,9 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class ToNodaStage : MonoBehaviour
 {
+    public AudioClip sound1;
+    AudioSource audioSource;
+    // Start is called before the first frame update
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Noda Stage");
+        audioSource.PlayOneShot(sound1);
+        Invoke(nameof(DelayMethod), 0.8f);
+        //SceneManager.LoadScene("Demo");
+    }
+    void DelayMethod()
+    {
+        SceneManager.LoadScene("NodaStage");
     }
 }

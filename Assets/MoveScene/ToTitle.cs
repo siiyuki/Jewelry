@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ToTitle : MonoBehaviour
 {
+    public AudioClip sound1;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -18,6 +20,13 @@ public class ToTitle : MonoBehaviour
     }
     public void OnClickStartButton()
     {
+        audioSource.PlayOneShot(sound1);
+        Invoke(nameof(DelayMethod), 0.8f);
+        //SceneManager.LoadScene("Demo");
+    }
+    void DelayMethod()
+    {
+        audioSource.PlayOneShot(sound1);
         SceneManager.LoadScene("Title");
     }
 }
