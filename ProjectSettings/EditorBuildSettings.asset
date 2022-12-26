@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stage/NodaStage3.unity
     guid: 641c36d50f7366f438a38e2855253dd8
+  - enabled: 1
+    path: Assets/Stage/ThankYouStage.unity
+    guid: 98272a5fc92c352459922cf67db158c7
   m_configObjects: {}
