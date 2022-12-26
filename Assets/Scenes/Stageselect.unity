@@ -900,7 +900,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b10a32babc8f3334592d5949430167d0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2279,8 +2279,8 @@ GameObject:
   - component: {fileID: 1263838109}
   - component: {fileID: 1263838108}
   - component: {fileID: 1263838107}
-  - component: {fileID: 1263838106}
   - component: {fileID: 1263838110}
+  - component: {fileID: 1263838111}
   m_Layer: 5
   m_Name: stage4
   m_TagString: Untagged
@@ -2309,19 +2309,6 @@ RectTransform:
   m_AnchoredPosition: {x: -573, y: -180}
   m_SizeDelta: {x: 501.2, y: 154}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1263838106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263838104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb4f67762845a645854ae23ae59c0ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound1: {fileID: 8300000, guid: d822c973a6366064385b1628be2c6f6e, type: 3}
 --- !u!114 &1263838107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2366,8 +2353,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1263838106}
-        m_TargetAssemblyTypeName: ToStage1, Assembly-CSharp
+      - m_Target: {fileID: 1263838111}
+        m_TargetAssemblyTypeName: ToRoadStage, Assembly-CSharp
         m_MethodName: OnClickStartButton
         m_Mode: 1
         m_Arguments:
@@ -2512,6 +2499,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1263838111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263838104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11865b8c29fc56842ba93051577ff353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound1: {fileID: 8300000, guid: d822c973a6366064385b1628be2c6f6e, type: 3}
 --- !u!1 &1331370425
 GameObject:
   m_ObjectHideFlags: 0
