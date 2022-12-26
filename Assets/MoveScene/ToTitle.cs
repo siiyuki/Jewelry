@@ -26,7 +26,7 @@ public class ToTitle : MonoBehaviour
     }
     void DelayMethod()
     {
-        audioSource.PlayOneShot(sound1);
+        
         SceneManager.LoadScene("Title");
     }
 }
