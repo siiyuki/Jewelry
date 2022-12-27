@@ -33,7 +33,7 @@ public class Zukankaihou : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        zukan_numa = PlayerPrefs.GetInt("SCOREA", 1);
+        zukan_numa = PlayerPrefs.GetInt("SCOREA", 0);
         zukan_numb = PlayerPrefs.GetInt("SCOREB", 1);
         zukan_numc = PlayerPrefs.GetInt("SCOREC", 1);
         zukan_numd = PlayerPrefs.GetInt("SCORED", 1);
