@@ -17,7 +17,6 @@ public class Goal : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-
         audioSource2 = GetComponent<AudioSource>();
         //audioSource = this.GetComponent<AudioSource>();
         //GameObject child = transform.Find("Particle System").gameObject;
@@ -28,6 +27,7 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (timeflag == true)
         {
 
