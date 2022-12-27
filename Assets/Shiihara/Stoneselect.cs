@@ -24,7 +24,7 @@ public class Stoneselect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stone_number = PlayerPrefs.GetInt("CHARA_NUMBER", 1);
+        stone_number = PlayerPrefs.GetInt("CHARA_NUMBER", 0);
 
         No0.SetActive(false);
         No1.SetActive(false);
