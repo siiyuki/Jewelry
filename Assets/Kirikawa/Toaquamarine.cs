@@ -5,19 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Toaquamarine: MonoBehaviour
 {
+    public AudioClip sound1;
+    AudioSource audioSource;
+
     public void OnClickStartButton()
     {
-        SceneManager.LoadScene("Aquamarine");
+        audioSource.PlayOneShot(sound1);
+        Invoke(nameof(DelayMethod), 0.8f);
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
+    void DelayMethod()
     {
-        
+
+        SceneManager.LoadScene("Aquamarine");
     }
 }
